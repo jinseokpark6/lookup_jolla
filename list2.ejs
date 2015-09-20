@@ -1,0 +1,513 @@
+<head>
+  <style>
+  @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+  @import url(http://weloveiconfonts.com/api/?family=entypo);
+
+  /* entypo */
+
+  [class*="entypo-"]:before {
+      font-family: 'entypo', sans-serif;
+  }
+
+  * {
+      box-sizing: border-box;
+  }
+
+  body {
+      /*background: #B5DAFF;*/
+      background: linear-gradient(135deg, rgba(85,239,203,1) 0%,rgba(30,87,153,1) 0%,rgba(85,239,203,1) 0%,rgba(91,202,255,1) 100%);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 10px;
+      font-family: 'Lato', sans-serif;
+      text-shadow: 0 0 1px rgba(255, 255, 255, 0.004);
+      font-size: 100%;
+      font-weight: 400;
+  }
+
+  .listhead {
+      position: absolute;
+      left: 9%;
+      top: 5%;
+      color: #FFFFFF;
+  }
+
+  .surveys {
+      position: absolute;
+      list-style: none;
+      top: 15%;
+      left: 7%;
+      margin: 20px 10px;
+      padding: 0;
+      z-index: 2;
+  }
+
+  .survey-item {
+      display: block;
+      margin-top: 10px;
+      padding: 20px;
+      border-radius: 2px;
+      background: white;
+      box-shadow: 0 2px 1px rgba(170, 170, 170, 0.25);
+  }
+
+  .survey-name {
+      font-weight: 400;
+  }
+
+  .grid .grid-only {
+      display: auto;
+  }
+  .grid .list-only {
+      display: none !important;
+  }
+
+  .ratingImg {
+      position: relative;
+      top: 90%;
+      width: 100%;
+      height: 100%;
+      display: block;
+  }
+
+  .imgDiv {
+      position: absolute;
+      left: 7%;
+      top: 75%;
+      height:10%;
+      width:50%;
+  }
+
+  .ratediv {
+      position: absolute;
+      top: 84.5%;
+      left: 72%;
+  }
+
+  .rating {
+      font-weight: bold;
+      border-radius: 2px;
+      box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, .1);
+      color: #111;
+      padding: 1px 3px 1px 3px;
+  }
+
+  .grid .survey-item {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      height: 200px;
+      width: 250px;
+      margin: 10px;
+  }
+  @media screen and (max-width: 600px) {
+      .grid .survey-item {
+        display: block;
+        width: auto;
+        height: 150px;
+        margin: 10px auto;
+    }
+}
+.grid .name {
+  display: block;
+  max-width: 80%;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.grid .category {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #A1A1A4;
+}
+
+.grid .dolla {
+  display: block;
+  font-size: 11px;
+  margin-bottom: 15px;
+}
+
+.grid .dist {
+  font-size: 11px;
+}
+
+.grid .survey-progress {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+}
+.grid .survey-progress-bg {
+  width: 40%;
+  display: block;
+}
+@media screen and (max-width: 200px) {
+  .grid .survey-progress-bg {
+    display: none;
+}
+}
+.grid .survey-progress-labels {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  line-height: 40px;
+}
+@media screen and (max-width: 200px) {
+  .grid .survey-progress-labels {
+    right: auto;
+    left: 10px;
+}
+}
+.grid .survey-progress-label {
+  line-height: 21px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.grid .survey-completes {
+  line-height: 21px;
+  font-size: 13px;
+  vertical-align: middle;
+}
+.grid .survey-stage {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.grid .survey-stage .stage {
+  display: none;
+}
+/*.grid .survey-stage .active {
+  display: block;
+  }*/
+  .grid .survey-end-date {
+      font-size: 12px;
+      line-height: 20px;
+  }
+
+  .survey-progress-label {
+      vertical-align: middle;
+      margin: 0 10px;
+      color: #8DC63F;
+  }
+
+  .survey-progress-bg {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      width: 100px;
+      height: 4px;
+      border-radius: 2px;
+      overflow: hidden;
+      background: #eee;
+  }
+
+  .survey-progress-fg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      left: 0;
+      margin: 0;
+      background: #8DC63F;
+  }
+
+  #bad {
+      background-color: #CC000F;
+      color: white;
+  }
+
+  #okay {
+      background-color: #FCDD62;
+      color: white;
+  }
+
+  #good {
+      background-color: #1D7D3D;
+      color: white;
+  }
+
+  #nullr {
+      background-color: #FFFFFF;
+      color: black;
+  }
+
+  #cheapest {
+      color: green;
+  }
+
+  #cheaper {
+      color: yellow;
+  }
+
+  #expensiver {
+      color: orange;
+  }
+
+  #expensivest {
+      color: red;
+  }
+
+  .bg-bubbles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+  }
+  .bg-bubbles li {
+      position: absolute;
+      list-style: none;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(255, 255, 255, 0.15);
+      bottom: -160px;
+      -webkit-animation: square 25s infinite;
+      animation: square 25s infinite;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+  }
+  .bg-bubbles li:nth-child(1) {
+      left: 10%;
+  }
+  .bg-bubbles li:nth-child(2) {
+      left: 20%;
+      width: 80px;
+      height: 80px;
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-animation-duration: 17s;
+      animation-duration: 17s;
+  }
+  .bg-bubbles li:nth-child(3) {
+      left: 25%;
+      -webkit-animation-delay: 4s;
+      animation-delay: 4s;
+  }
+  .bg-bubbles li:nth-child(4) {
+      left: 40%;
+      width: 60px;
+      height: 60px;
+      -webkit-animation-duration: 22s;
+      animation-duration: 22s;
+      background-color: rgba(255, 255, 255, 0.25);
+  }
+  .bg-bubbles li:nth-child(5) {
+      left: 70%;
+  }
+  .bg-bubbles li:nth-child(6) {
+      left: 80%;
+      width: 120px;
+      height: 120px;
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s;
+      background-color: rgba(255, 255, 255, 0.2);
+  }
+  .bg-bubbles li:nth-child(7) {
+      left: 32%;
+      width: 160px;
+      height: 160px;
+      -webkit-animation-delay: 7s;
+      animation-delay: 7s;
+  }
+  .bg-bubbles li:nth-child(8) {
+      left: 55%;
+      width: 20px;
+      height: 20px;
+      -webkit-animation-delay: 15s;
+      animation-delay: 15s;
+      -webkit-animation-duration: 40s;
+      animation-duration: 40s;
+  }
+  .bg-bubbles li:nth-child(9) {
+      left: 25%;
+      width: 10px;
+      height: 10px;
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+      -webkit-animation-duration: 40s;
+      animation-duration: 40s;
+      background-color: rgba(255, 255, 255, 0.3);
+  }
+  .bg-bubbles li:nth-child(10) {
+      left: 90%;
+      width: 160px;
+      height: 160px;
+      -webkit-animation-delay: 11s;
+      animation-delay: 11s;
+  }
+  @-webkit-keyframes square {
+      0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        -webkit-transform: translateY(-700px) rotate(600deg);
+        transform: translateY(-700px) rotate(600deg);
+    }
+}
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+    transform: translateY(-700px) rotate(600deg);
+}
+}
+</style>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    var current_lat = <%= lat %>;
+    var current_lng = <%= lng %>;
+    console.log(current_lat);
+    console.log(current_lng);
+
+    var hrefIs = window.location.href;
+    var varStart = hrefIs.indexOf("?");
+    var vars = hrefIs.substring(varStart + 1, hrefIs.length);
+
+    // splicing the substring into latitude and longitude
+    var spliceIndex = vars.indexOf("&");
+    var latWhole = vars.substring(0, spliceIndex);
+    var lngWhole = vars.substring(spliceIndex + 1, vars.length);
+
+    // parsing equals for latitude
+    var latEquals = latWhole.indexOf("=");
+    var latProc = latWhole.substring(latEquals + 1, latWhole.length);
+
+    // parsing equals for longitude
+    var lngEquals = lngWhole.indexOf("=");
+    var lngProc = lngWhole.substring(lngEquals + 1, lngWhole.length);
+
+    var jsonUrl = "http://api.tripadvisor.com/api/partner/2.0/map/" + current_lat + "," + current_lng + "?key=0DC3A3AB8DE94E6399BB1818B6BBF005";
+
+    $.getJSON( jsonUrl, function( locdata ) {
+      var items = [];
+
+      var color_init = "yellow";
+      var this_color = color_init;
+      for(var i = 0; i < locdata.data.length; i++){
+        //console.log(locdata.data[i].web_url);
+        this_color = colorswap(this_color);
+        console.log(this_color);
+        var rating;
+        var ratespan;
+        var priceLv;
+        var ratingImgSpan;
+        var priceDiv;
+
+        // setting ratingImgSpan
+
+        if (locdata.data[i].rating_image_url == null) {
+            ratingImgSpan = '';
+        }
+        else {
+            ratingImgSpan = '<img class="ratingImg" src="' + locdata.data[i].rating_image_url + '"></img>';
+        }
+
+        // setting ratespan element according to the retrieved price
+
+        if (locdata.data[i].rating == null) {
+            rating = "0.0";
+            ratespan = '<span class="rating" id="nullr">';
+        }
+        else if (locdata.data[i].rating < 3){
+            console.log(locdata.data[i].rating + " is bad");
+            rating = locdata.data[i].rating;
+            ratespan = '<span class="rating" id="bad">';
+        }
+        else if (locdata.data[i].rating < 4){
+            console.log(locdata.data[i].rating + " is okay");
+            rating = locdata.data[i].rating;
+            ratespan = '<span class="rating" id="okay">';
+        }
+        else {
+            console.log(locdata.data[i].rating + " is good");
+            rating = locdata.data[i].rating;
+            ratespan = '<span class="rating" id="good">';
+        }
+
+        // setting pricelv span according to the retrieved price
+
+        if (locdata.data[i].price_level ==  null) {
+            //<div class="dolladiv"><span class="dolla grid-only">' + locdata.data[i].price_level + '</span></div>
+            priceLv = "-";
+            priceDiv = '<div class="dolladiv"><span class="dolla grid-only">' + priceLv + '</span></div>';
+        }
+        else {
+            priceLv = locdata.data[i].price_level;
+            if (priceLv == "$") {
+                priceDiv = '<div class="dolladiv"><span class="dolla grid-only" id="cheapest">' + priceLv + '</span></div>';
+            }
+            else if (priceLv == "$$"){
+                priceDiv = '<div class="dolladiv"><span class="dolla grid-only" id="cheaper">' + priceLv + '</span></div>';
+            }
+            else if (priceLv == "$$$"){
+                priceDiv = '<div class="dolladiv"><span class="dolla grid-only" id="expensiver">' + priceLv + '</span></div>';
+            }
+            else {
+                priceDiv = '<div class="dolladiv"><span class="dolla grid-only" id="expensivest">' + priceLv + '</span></div>';
+            }
+        }
+        items.push(
+            '<li class="survey-item"><div class="item"><a class="ahr" href="' + locdata.data[i].web_url + '"></a><div class="namediv"><span class="name">' + locdata.data[i].name + '</span></div><div class="categorydiv"><span class="category grid-only">' + locdata.data[i].category.name + '</span></div>' + priceDiv + '<div class="distdiv"><span class="dist">' + locdata.data[i].distance + 'm away</span></div><div class="pull-right"><span class="survey-progress"></span></div><div class="ratediv">' + ratespan + rating + '</span></div><div class="imgdiv">' + ratingImgSpan + '</div></div>'
+            );
+    }
+
+    $('.ahr').css("display", "none");
+    $('.surveys.grid').append( items.join('') );
+
+    $('.item').click(function() {
+        window.location = $(this).find("a").attr("href");
+        return false;
+    });
+});
+
+function colorswap(color) {
+    switch(color) {
+        case "yellow":
+        return "red";
+        case "red":
+        return "lime";
+        case "lime":
+        return "emerald";
+        case "emerald":
+        return "orange";
+        case "orange":
+        return "yellow";
+    }
+}
+});
+</script>
+<h1 class="listhead"> Nearby Attractions </h1>
+<!--<span class="toggler active" data-toggle="grid"><span class="entypo-layout"></span></span>
+    <span class="toggler" data-toggle="list"><span class="entypo-list"></span></span>-->
+
+    <ul class="surveys grid"></ul>  
+
+    <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
